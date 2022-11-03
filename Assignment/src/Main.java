@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Main {
-static int a, b, n;
+static int a, b, n; 
 static int cases = 0; // 경우의 수
 
 // 나올 수 있는 모든 방법을 계산하고, 그 중 해당하는 경우만큼 cases에 저장하는 함수
@@ -26,8 +26,8 @@ calc(score, oper + '+', arr);
 calc(score, oper + '-', arr);
 } else {
 // 아래 코드는 테스트 해볼 때 사용해보세요. 모든 경우를 출력합니다.
-// System.out.print(oper+" ");
-// System.out.println(score);
+ System.out.print(oper+" ");
+ System.out.println(score);
 if (a <= score && score <= b)
 cases++;
 }
