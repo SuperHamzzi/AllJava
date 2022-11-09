@@ -1,0 +1,42 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+		Queue<Character> qu = new LinkedList<>();
+		Queue<Character> qu2 = new LinkedList<>();
+		Queue<Character> qu3 = new LinkedList<>();
+		Scanner sc = new Scanner(System.in);
+		String a = sc.next();
+		String b = sc.next();
+		for(char x: a.toCharArray()) {
+			qu.offer(x); // qu에 a배열을 담음
+		}
+		for(char x: b.toCharArray()) {
+			qu2.offer(x); // qu2에 b배열을 담음
+		}
+		while(!qu2.isEmpty()) {
+			if(qu.peek()==qu2.peek()) {
+				qu.poll();
+				qu2.poll();
+			}
+			else{
+				qu3.offer(qu.poll());
+			}
+		}
+		while(!qu.isEmpty()){
+			qu3.offer(qu.poll());
+		}
+		while(!qu3.isEmpty()) {
+			System.out.print(qu3.poll());
+		}
+		
+		
+		
+	
+
+}
+}
+	

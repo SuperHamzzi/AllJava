@@ -25,7 +25,7 @@ if (i < n - 1) {
 calc(score, oper + '+', arr);
 calc(score, oper + '-', arr);
 } else {
-// 아래 코드는 테스트 해볼 때 사용해보세요. 모든 경우를 출력합니다.
+	//모든 경우의수를 출력
  System.out.print(oper+" ");
  System.out.println(score);
 if (a <= score && score <= b)

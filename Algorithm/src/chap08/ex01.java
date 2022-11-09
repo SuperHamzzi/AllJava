@@ -1,17 +1,17 @@
 package chap08;
 
+import java.util.Scanner;
 
 public class ex01 {
 	static String answer= "NO";
 	static int n, total=0;
 	boolean flag = false;
-
-	public boolean DFS(int L, int sum, int[] arr) {
+	public void DFS(int L, int sum, int[] arr) {
 		if(flag) return;
-		if(sum>total/2) return;
+		if(sum>total/2)  return;
 		if(L==n){
 			if((total-sum)==sum){
-				answer="YES"
+				answer="YES";
 						flag=true;
 			}
 		}else{
@@ -21,7 +21,7 @@ public class ex01 {
 	}
 
 	public static void main(String[] args) {
-		Main T = new Main();
+		ex01 T = new ex01();
 		Scanner sc  = new Scanner(System.in);
 		n= sc.nextInt();
 		int[] arr = new int[n];
